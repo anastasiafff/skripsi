@@ -13,7 +13,7 @@ export default function Home() {
         {/* Gambar Estetik / Logo */}
         <div className="relative w-full h-40 overflow-hidden rounded-xl shadow-xl">
           <Image
-            src="/mnt/data/image(776).png" // Ganti dengan path yang sesuai jika gambar lainnya digunakan
+            src="public/pict1.jpg" // Ganti dengan path yang sesuai jika gambar lainnya digunakan
             alt="Logo Estetik"
             width={150} // Tentukan ukuran gambar sesuai kebutuhan
             height={150}
