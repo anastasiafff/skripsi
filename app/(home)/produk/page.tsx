@@ -54,7 +54,7 @@ async function fetchProducts({ pageParam = 1, keyword = "", category = "", brand
   });
 
   if (!res.ok) {
-    throw new Error("Failed fetch products");
+    throw new Error("Gagal mengambil produk");
   }
 
   return res.json();
@@ -122,22 +122,22 @@ export default function Home() {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Title */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Katalog Produk Skincare</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Temukan produk skincare terbaik</p>
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Katalog Produk Skincare</h1>
+        <p className="text-sm text-gray-600 dark:text-gray-300">Temukan produk skincare terbaik untuk perawatan kulit Anda.</p>
       </div>
 
       {/* Search + Filters */}
-      <div className="border rounded-lg p-6 bg-gray-50 dark:bg-gray-800 space-y-6 shadow-lg">
+      <div className="border rounded-lg p-6 bg-blue-50 dark:bg-blue-800 space-y-6 shadow-lg">
         {/* Search */}
         <div className="flex gap-4">
           <Input
             placeholder="Cari produk skincare..."
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            className="w-full p-3 rounded-lg bg-white border border-gray-300 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 rounded-lg bg-white border border-gray-300 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-blue-500"
           />
 
-          <Button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all">
+          <Button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
             <IconSearch className="w-4 h-4 mr-2" />
             Cari
           </Button>
@@ -215,7 +215,7 @@ export default function Home() {
                   <IconDots className="w-4 h-4" />
                 </Button>
 
-                <Badge className="text-[10px] bg-indigo-500 text-white">{product.category}</Badge>
+                <Badge className="text-[10px] bg-blue-500 text-white">{product.category}</Badge>
               </div>
 
               <Image src={product?.image || "/placeholder.svg"} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" width={200} height={200} alt={product.name} />
@@ -252,7 +252,7 @@ export default function Home() {
 
             <CardFooter className="pt-0">
               <Link className="w-full cursor-pointer" href={`/produk/${product.id}`}>
-                <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg">Lihat Detail</Button>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg">Lihat Detail</Button>
               </Link>
             </CardFooter>
           </Card>
@@ -261,10 +261,10 @@ export default function Home() {
 
       {/* Infinite scroll trigger */}
       <div ref={loadMoreRef} className="h-10 flex items-center justify-center">
-        {isFetchingNextPage && <p className="text-sm text-muted-foreground">Loading more...</p>}
+        {isFetchingNextPage && <p className="text-sm text-muted-foreground">Memuat lebih banyak...</p>}
       </div>
 
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p>Memuat...</p>}
     </div>
   );
 }
