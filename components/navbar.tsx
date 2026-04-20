@@ -40,8 +40,6 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 const defaultNavigationLinks: NavbarNavLink[] = [
   { href: "/produk", label: "Product" },
   { href: "/rekomendasi", label: "Cari Rekomendasi" },
-  { href: "/artikel", label: "Artikel" },
-  { href: "/review", label: "Review Saya" },
 ];
 
 export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(({ className, logo = <Logo />, logoHref = "/", navigationLinks = defaultNavigationLinks, ...props }, ref) => {
