@@ -1,36 +1,27 @@
-"use client"
-
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
-    <div 
-      className="flex min-h-screen items-center justify-center bg-cover bg-center font-sans dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-black"
-      style={{ backgroundImage: 'url("/mnt/data/image(777).png")' }} // Ganti dengan path yang sesuai
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center py-32 px-8 bg-white dark:bg-gray-800 rounded-3xl shadow-lg space-y-12 sm:items-start sm:text-left bg-opacity-80">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-teal-300 via-pink-400 to-indigo-600 font-sans dark:bg-black">
+      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center py-32 px-8 bg-white dark:bg-gray-800 rounded-3xl shadow-lg space-y-12 sm:items-start sm:text-left">
         
-        {/* Gambar Estetik / Logo */}
-        <div className="relative w-full h-40 overflow-hidden rounded-xl shadow-xl">
-          <Image
-            src="public/pict1.jpg" // Ganti dengan path yang sesuai jika gambar lainnya digunakan
-            alt="Logo Estetik"
-            width={150} // Tentukan ukuran gambar sesuai kebutuhan
-            height={150}
-            className="rounded-xl object-center opacity-80 hover:opacity-100 transition-all duration-500"
-          />
-        </div>
-
-        {/* Judul dan Deskripsi */}
-        <div className="flex flex-col items-center gap-8 text-center sm:items-start sm:text-left">
-          <h1 className="text-4xl font-semibold leading-tight text-gray-800 dark:text-white sm:max-w-md hover:text-indigo-600 transition-colors duration-300">
-            Selamat Datang di GlowUp
+        {/* Heading and Subheading with soft pink background */}
+        <div className="flex flex-col items-center gap-8 text-center sm:items-start sm:text-left bg-pink-100 p-8 rounded-xl shadow-md">
+          {/* Main Heading with a bold and large font */}
+          <h1 className="text-5xl font-extrabold leading-tight text-gray-800 dark:text-white sm:max-w-md hover:text-indigo-600 transition-colors duration-300">
+            𝐒𝖾ᥣαꭑα𝗍 𝐃α𝗍α𐓣𝗀 ᑯ𝗂 𝐆ᥣⱺω𝐔ρ  𝜗𝜚 ࣪˖ ִ𐙚 
           </h1>
-          <p className="text-lg leading-7 text-gray-600 dark:text-gray-300 sm:max-w-lg hover:text-indigo-500 transition-colors duration-300">
-            Temukan produk skincare terbaik untuk kebutuhan kulit Anda. Ayo mulai mencari sekarang dan temukan yang terbaik!
+
+          {/* Subheading with a lighter font and italic style */}
+          <p className="text-xl italic font-light leading-8 text-gray-600 dark:text-gray-300 sm:max-w-lg hover:text-indigo-500 transition-colors duration-300">
+            Selamat mencari produk skincare sesuai kulit anda. Temukan pilihan terbaik yang cocok untuk kebutuhan kulit Anda.
+          </p>
+
+          {/* Additional smaller text with normal weight */}
+          <p className="text-md font-normal text-gray-500 dark:text-gray-400 sm:max-w-lg mt-4">
+            Kami menyediakan berbagai produk untuk berbagai jenis kulit, dengan kualitas terbaik yang akan membuat kulit Anda semakin bersinar.
           </p>
         </div>
-
       </main>
     </div>
   );

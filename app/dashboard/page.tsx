@@ -11,7 +11,7 @@ export default function Dashboard() {
         <h1 className="text-3xl">Dashboard</h1>
         <div className="flex flex-row gap-2">
           <Button variant={'secondary'}>Export Data</Button>
-          <Button>Tambah Product</Button>
+          <Button>Tambah Produk</Button>
         </div>
       </div>
       <div className="grid auto-rows-min gap-4 md:grid-cols-4">
