@@ -38,7 +38,7 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const defaultNavigationLinks: NavbarNavLink[] = [
-  { href: "/produk", label: "Product" },
+  { href: "/produk", label: "Produk" },
   { href: "/rekomendasi", label: "Cari Rekomendasi" },
 ];
 
