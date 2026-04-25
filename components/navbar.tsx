@@ -118,7 +118,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(({ className, l
           {/* Logo */}
           <Link href={logoHref} className="flex items-center gap-2 font-bold text-xl">
             <span className="text-2xl">{logo}</span>
-            <span className="hidden sm:inline">HOME</span>
+            <span className="hidden sm:inline">Beranda</span>
           </Link>
 
           {/* Desktop menu */}
